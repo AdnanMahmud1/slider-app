@@ -261,10 +261,10 @@ ul {
   max-width: 800px;
   position: relative;
   height: 450px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
-.slide{
+.slide {
   text-align: center;
   position: absolute;
   top: 0;
@@ -274,18 +274,18 @@ ul {
   transition: var(--transition);
 }
 
-.name{
+.name {
   text-transform: uppercase;
   color: var(--primary-500);
-  margin-bottom:  0.75rem;
+  margin-bottom: 0.75rem;
 }
-.title{
+.title {
   text-transform: capitalize;
   color: var(--grey-700);
-  margin-bottom:  0.75rem;
+  margin-bottom: 0.75rem;
 }
 
-.text{
+.text {
   max-width: 35em;
   margin: 0 auto;
   margin-top: 2 rem;
@@ -293,7 +293,7 @@ ul {
   color: var(--grey-500);
 }
 
-.icon{
+.icon {
   font-size: 3rem;
   margin-top: 1rem;
   color: var(--primary-500);
@@ -309,7 +309,8 @@ ul {
   box-shadow: var(--shadow-3);
 }
 
-.prev,.next{
+.prev,
+.next {
   position: absolute;
   top: 200px;
   background: var(--grey-500);
@@ -323,26 +324,51 @@ ul {
   cursor: pointer;
   transition: var(--transition);
 }
-.prev:hover, .next:hover{
+.prev:hover,
+.next:hover {
   background: var(--primary-500);
 }
 
-
-.prev{
+.prev {
   left: 0;
 }
 
-.next{
+.next {
   right: 0;
 }
 
-@media screen and (min-width:800px){
-  .text{
+@media screen and (min-width: 800px) {
+  .text {
     max-width: 45em;
   }
-  .prev,.next{
+  .prev,
+  .next {
     width: 2rem;
     height: 2rem;
     font-size: 1.5rem;
   }
+}
+.next-slide {
+  transform: translateX(100%);
+}
+
+/* ============= Slick Craousel CSS =============== */
+
+.slick-container {
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 80vw;
+  max-width: 800px;
+  text-align: center;
+}
+
+.slick-slide img{
+  display: inline-block;
+}
+
+.slick-prev::before{
+  color: var(--primary-500) !important
+}
+.slick-next::before{
+  color: var(--primary-500) !important
 }
